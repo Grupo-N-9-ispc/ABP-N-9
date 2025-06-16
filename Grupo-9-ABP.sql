@@ -24,3 +24,9 @@ UPDATE usuarios SET email = 'gonzalovargas576@gmail.com' WHERE id = 1;
 DELETE FROM usuarios WHERE id = 1;
 INSERT INTO usuarios (nombre, email, contraseña, rol_id, estado)
 VALUES ('mariela  D´Aloia', 'marudaloia@gmail.com', 'Mar376', 'usuario_estándar', 'activo');
+INSERT INTO usuarios (nombre, email, contraseña, rol_id, estado)
+VALUES ('Tort Ludmila Cristal', 'tortcristal@gmail.com', 'Cristal89', 'admin', 'activo');
+INSERT INTO usuarios (nombre, email, contraseña, rol_id, estado)
+VALUES ('Cristian Mauricio Fernandez', 'fernandez.cristian.m@gmail.com', 'Cris569', 'usuario_estandar', 'inactivo');
+
+
