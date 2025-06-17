@@ -44,14 +44,16 @@ Aunque en ciertos momentos cada integrante asume responsabilidades particulares,
 
 <h2>FUNCIONAMIENTO DEL PROGRAMA</h2>
 Registro e inicio de sesión: El programa inicia mostrando un menú principal con opciones para registrarse o iniciar sesión:
---- USUARIOS ---
+
+<P>--- USUARIOS ---</P>
 Registrarse
 Iniciar sesión
 Salir
 Si el usuario elige registrarse, se le solicita: nombre, mail y contraseña.
 Si elige iniciar sesión, se validan email y contraseña.
 Funcionalidades como usuario estandar: Una vez autenticado, si el usuario tiene el rol usuario, accede al siguiente menú:
---- MENÚ USUARIO —
+
+<P>--- MENÚ USUARIO —</P>
 1. Ver mis datos
 2. Cerrar sesión
 
