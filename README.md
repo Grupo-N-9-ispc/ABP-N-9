@@ -58,10 +58,10 @@ Funcionalidades como usuario estandar: Una vez autenticado, si el usuario tiene 
 
 Si el usuario autenticado ingresa con los datos que se muestran aquí abajo, el rol admin, accede a un menú de administrador:
 
-if _name_ =="_main_":
+<P>if _name_ =="_main_":
     #Cargar un admin por defecto
     usuarios.append(Usuario("admin", "admin@email.com", "admin123", "admin"))
-    menu_principal()
+    menu_principal()</P>
 
     
 --- Menú Administrador ---
