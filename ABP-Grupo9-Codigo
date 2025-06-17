@@ -6,7 +6,7 @@ from getpass import getpass
 usuarios = []
 
 class Usuario:
-    def __init__(self, nombre, email, contraseña, rol="usuario", estado= "activo"):
+    def __init__(self, nombre, email, contraseña, rol="estandar", estado= "activo"):
         self.nombre = nombre
         self.email = email
         self.contraseña = contraseña
@@ -28,10 +28,14 @@ def validar_contraseña(clave):
     return len(clave) >= 6 and any(c.isdigit() for c in clave) and any(c.isalpha() for c in clave)
 
 def registrar_usuario():
-    print("\n--- Registro de Usuario ---")
+    print("\n#### Registro de usuario ####")
     nombre = input("Nombre de usuario: ")
     email = input("Email: ")
     contraseña = getpass("Contraseña: ")
+
+    if not nombre or not email or not contraseña:
+        print("No se puede registrar un usuario si los campos estan vacíos")
+        return
 
     if not validar_contraseña(contraseña):
         print("La contraseña debe tener al menos 6 caracteres, letras y números.")
@@ -42,25 +46,25 @@ def registrar_usuario():
     print("Usuario registrado con éxito.\n")
 
 def iniciar_sesion():
-    print("\n--- Inicio de Sesión ---")
+    print("\n#### Inicio de sesión ####")
     email = input("Email: ")
     contraseña = getpass("Contraseña: ")
 
     for usuario in usuarios:
         if usuario.email == email and usuario.contraseña == contraseña:
-            print(f"\n¡Bienvenid@, {usuario.nombre}!")
+            print(f"\n¡Bienvenido a Edu.Punilla, {usuario.nombre}!")
             if usuario.es_admin():
                 menu_admin(usuario)
             else:
                 menu_usuario(usuario)
             return
 
-    print("Credenciales incorrectas.\n")
+    print("Uno de los datos ingresado es incorrectas.\n")
 
-#Este es el menú para el suario estándar
+#Este es el menu para el usuario estandar
 def menu_usuario(usuario):
     while True:
-        print("\n--- Menú Usuario ---")
+        print("\n#### Menú Usuario ####")
         print("1. Ver mis datos")
         print("2. Cerrar sesión")
         opcion = input("Opción: ")
@@ -76,7 +80,7 @@ def menu_usuario(usuario):
 # Menú para el administrador
 def menu_admin(usuario):
     while True:
-        print("\n--- Menú Administrador ---")
+        print("\n#### Menú Administrador ####")
         print("1. Ver todos los usuarios")
         print("2. Cambiar rol de usuario")
         print("3. Eliminar usuario")
@@ -114,7 +118,7 @@ def menu_admin(usuario):
 #Menú principal
 def menu_principal():
     while True:
-        print("\n--- Bienvenido al Sistema ---")
+        print("\n#### BIENVENIDO A EDU.PUNILLA ####")
         print("1. Registrarse")
         print("2. Iniciar sesión")
         print("3. Salir")
@@ -125,7 +129,7 @@ def menu_principal():
         elif opcion == "2":
             iniciar_sesion()
         elif opcion == "3":
-            print("¡Hasta luego!")
+            print("Has salido del menu principal")
             break
         else:
             print("Opción no válida.")
