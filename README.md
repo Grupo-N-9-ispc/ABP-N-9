@@ -1,28 +1,48 @@
 # ABP-N-9
 ABP- Programación-Base de Datos
 
-Edu.Punilla
-INTEGRANTES
-D’Aloia Mariela Anahí
-Fernández Cristian Mauricio
-Tort Ludmila Cristal
-Vargas Gonzalo Nicolás
-DESCRIPCIÓN DEL PROYECTO
-Desarrollo de un sistema de registro y gestión de usuarios basado en roles e implementación en entorno de consola con base de datos local
-FUNDAMENTACIÓN
+<h1>Edu.Punilla</h1>
+</p>
+
+</p>
+
+<h2>INTEGRANTES</h2>
+-D’Aloia Mariela Anahí
+-Fernández Cristian Mauricio
+-Tort Ludmila Cristal
+-Vargas Gonzalo Nicolás
+</p>
+
+</p>
+
+<h2>DESCRIPCIÓN DEL PROYECTO</h2>
+Desarrollo de un sistema de registro y gestión de usuarios basado en roles e implementación en entorno de consola con base de datos local.
+
+</p>
+
+</p>
+
+<h2>FUNDAMENTACIÓN</h2>
 La elección de una carrera es un momento clave. En zonas como el Valle de Punilla, la información sobre la oferta académica suele estar dispersa, dificultando la toma de decisiones. Este proyecto busca reunir en un solo sitio todos los datos relevantes para aquellas personas que necesiten conocer qué, dónde, cómo estudiar cerca de casa. Ofreciendo el plus de poder encontrar fácilmente posibles compañeros de estudio que se encuentren dentro del área de Punilla.
 Posibles Funcionalidades o Áreas de Enfoque Inicial
 Unificamos la información de todas las ofertas educativas del nivel terciario o superior del área de Punilla. Enfocado a personas de todas las edades de dicho departamento que quieran iniciar sus estudios.
+</p>
 
+</p>
 
-OBJETIVO
+<h2>OBJETIVO</h2>
 Desarrollar una aplicación de consola con un menú interactivo que permita gestionar usuarios de acuerdo con su rol, diferenciando entre administradores y usuarios estándar. El sistema incluye también funciones como registro y acceso de usuarios, garantizando un control adecuado sobre quién puede acceder a cada función. A su vez, se implementará una base de datos local que asegure el almacenamiento, organización y manipulación de la información, favoreciendo una administración segura y ordenada de los datos. 
-ORGANIZACIÓN DE TAREAS
+
+</p>
+
+</p>
+
+<h2>ORGANIZACIÓN DE TAREAS</h2>
 El proyecto fue desarrollado de forma conjunta por todos los miembros del equipo: Cristian, Gonzalo, Maru y Cristal. Desde el comienzo, coordinamos el trabajo en equipo para organizar las tareas y definir los pasos a seguir.
 Aunque en ciertos momentos cada integrante asume responsabilidades particulares, el eje central fue siempre la colaboración. Nos acompañamos en la lógica de programación, en la detección y corrección de errores, y en la implementación de las distintas funcionalidades.
 
 
-FUNCIONAMIENTO DEL PROGRAMA
+<h2>FUNCIONAMIENTO DEL PROGRAMA</h2>
 Registro e inicio de sesión: El programa inicia mostrando un menú principal con opciones para registrarse o iniciar sesión:
 --- USUARIOS ---
 Registrarse
@@ -38,6 +58,12 @@ Funcionalidades como usuario estandar: Una vez autenticado, si el usuario tiene 
 
 Si el usuario autenticado ingresa con los datos que se muestran aquí abajo, el rol admin, accede a un menú de administrador:
 
+if _name_ =="_main_":
+    #Cargar un admin por defecto
+    usuarios.append(Usuario("admin", "admin@email.com", "admin123", "admin"))
+    menu_principal()
+
+    
 --- Menú Administrador ---
 1. Ver todos los usuarios
 2. Cambiar rol de usuario
